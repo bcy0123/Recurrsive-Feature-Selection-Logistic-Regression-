@@ -224,7 +224,17 @@ from sklearn.metrics import confusion_matrix
 confusion_matrix( y_pred_tr2,y_tr)
 
 
-# In[ ]:
+# In[109]:
+
+#Prediction for training set after feature extraction
+y_pred_tr2=selector.predict(X_tr_scaled)
+
+# In[110]:
+#Variable Ranks
+Ranks=pd.DataFrame(selector.ranking_,list(X_tr.columns))
+Ranks
+Ranks.sort_values(by=0)
+
 
 
 
